@@ -14,7 +14,8 @@ const WorldClock = function () {
     { name: 'London, Böyük Britaniya', timezone: 'Europe/London', code: 'GB' },
     { name: 'Paris, Fransa', timezone: 'Europe/Paris', code: 'FR' },
     { name: 'Berlin, Almaniya', timezone: 'Europe/Berlin', code: 'DE' },
-    { name: 'New York, ABŞ', timezone: 'America/New_York', code: 'US' }
+    { name: 'New York, ABŞ', timezone: 'America/New_York', code: 'US' },
+    { timezone: 'Europe/Amsterdam', code: 'NL', name: 'Amsterdam, Holland' }
   ];
 
   useEffect(function () {
@@ -147,7 +148,6 @@ const WorldClock = function () {
 
     const cityTimezones = {
       'ankara': { timezone: 'Europe/Istanbul', code: 'TR', name: 'Ankara, Türkiyə' },
-      'amsterdam': { timezone: 'Europe/Amsterdam', code: 'NL', name: 'Amsterdam, Holland' },
       'prague': { timezone: 'Europe/Prague', code: 'CZ', name: 'Prague, Çexiya' },
       'vienna': { timezone: 'Europe/Vienna', code: 'AT', name: 'Vienna, Avstriya' },
       'budapest': { timezone: 'Europe/Budapest', code: 'HU', name: 'Budapest, Macarıstan' },
@@ -345,7 +345,7 @@ const WorldClock = function () {
         }}>
           <input
             type="text"
-            placeholder="Şəhər adı yazın... (amsterdam, prague, vienna)"
+            placeholder="Şəhər adı yazın... (Ankara, Prague, Vienna)"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{
